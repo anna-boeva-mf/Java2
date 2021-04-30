@@ -1,3 +1,5 @@
+package lesson1;
+
 public class Man implements Running, Jumping {
     public String name;
     public int maxLength;

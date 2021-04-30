@@ -1,3 +1,5 @@
+package lesson1;
+
 public class Wall extends Sport {
     private int height;
 

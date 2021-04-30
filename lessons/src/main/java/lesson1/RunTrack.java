@@ -1,3 +1,5 @@
+package lesson1;
+
 public class RunTrack extends Sport {
     private int length;
 

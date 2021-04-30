@@ -1,3 +1,5 @@
+package lesson1;
+
 public class MainApp {
     public static void main(String[] args) {
         int memberCount = 6, sportCount = 4;
