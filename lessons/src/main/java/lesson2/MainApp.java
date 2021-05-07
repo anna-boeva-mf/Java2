@@ -41,9 +41,9 @@ public class MainApp {
 
     }
 
-    public static int sumArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
+    public static int sumArray(String[][] array) {
         if (array.length != 4 || array[0].length != 4) {
-            throw new MyArraySizeException("Размер массива не равен 4х4");
+            throw new MyArraySizeException();
         }
         int sumAr = 0;
         int i = 0, j = 0;
@@ -54,7 +54,7 @@ public class MainApp {
                 }
             }
         } catch (NumberFormatException e) {
-            throw new MyArrayDataException("В поле массива [" + i + "][" + j + "] находится не число");
+            throw new MyArrayDataException(i, j);
         }
         return sumAr;
     }
