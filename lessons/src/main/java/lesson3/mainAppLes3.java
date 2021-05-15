@@ -15,11 +15,7 @@ public class mainAppLes3 {
         String word;
         while (iter.hasNext()) {
             word = iter.next();
-            if (wordMap.containsKey(word)) {
-                wordMap.replace(word, wordMap.get(word) + 1);
-            } else {
-                wordMap.put(word, 1);
-            }
+            wordMap.put(word, wordMap.getOrDefault(word, 0) + 1);
         }
         System.out.println("Массив слов: " + wordList);
         System.out.println("Уникальные элементы: " + wordMap.keySet());
