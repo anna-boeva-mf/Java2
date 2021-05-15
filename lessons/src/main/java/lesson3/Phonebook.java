@@ -37,7 +37,7 @@ public class Phonebook {
         }
     }
 
-    private HashMap<String, ArrayList<Contact>> contactInfo;
+    private Map<String, List<Contact>> contactInfo;
 
     public Phonebook() {
         this.contactInfo = new HashMap<>();
@@ -48,13 +48,18 @@ public class Phonebook {
         if (contactInfo.containsKey(lastN)) {
             contactInfo.get(lastN).add(c);
         } else {
-            ArrayList cList = new ArrayList<>(1);
+            List<Contact> cList = new ArrayList<>();
             cList.add(c);
             contactInfo.put(lastN, cList);
         }
     }
 
-    public ArrayList<Contact> get(String lastN) {
-        return contactInfo.get(lastN);
+    public List<Contact> get(String lastN) {
+        List<Contact> c = contactInfo.get(lastN);
+        if (c != null) {
+            return contactInfo.get(lastN);
+        } else {
+            return Collections.emptyList();
+        }
     }
 }

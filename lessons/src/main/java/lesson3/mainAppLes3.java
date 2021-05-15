@@ -34,10 +34,6 @@ public class mainAppLes3 {
         }
 
         String nameToFindPhone = "R";
-        if (phBook.get(nameToFindPhone) != null) {
-            System.out.println("Телефон(ы) контакта " + nameToFindPhone + ": " + phBook.get(nameToFindPhone));
-        } else {
-            System.out.println("Контакт " + nameToFindPhone + " не найден");
-        }
+        System.out.println("Телефон(ы) контакта " + nameToFindPhone + ": " + phBook.get(nameToFindPhone));
     }
 }
