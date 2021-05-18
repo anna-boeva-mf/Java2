@@ -3,5 +3,5 @@ module Java2 {
     requires javafx.controls;
 /*    requires java.desktop; */
 
-    opens lesson4;
+    opens lesson7;
 }
