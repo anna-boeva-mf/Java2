@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson7.Controller">
+
+    <TextArea fx:id="dialogArea" editable="false" style="-fx-control-inner-background: #f6defc; -fx-background-color: #edc6f7; -fx-text-fill: #5a1f6e;" VBox.vgrow="ALWAYS">
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding></TextArea>
+
+    <HBox spacing="5.0">
+        <TextField fx:id="answerField" onAction="#txtSendAnswer" promptText="Введите текст" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnSend" text="Отправить" />
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+    </HBox>
+
+    <HBox prefWidth="480.0" spacing="5">
+        <Button maxWidth="Infinity" onAction="#btnExitAction" opacity="0.7" text="Закрыть чат" />
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+    </HBox>
+
+</VBox>
